@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'bcschainApp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bcschain_db',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
+        'NAME': 'd4qp868uvuj81u',
+        'USER': 'dgsysnxyrmdtab',
+        'PASSWORD': '11600ed220663c2212984d2189dcabc038154e29e425aeecde50c13cb6f8eb46',
+        'HOST': 'ec2-52-70-135-246.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
