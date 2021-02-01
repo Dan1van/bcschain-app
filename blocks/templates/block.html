@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Тестовое задание. Стажер - Python Developer{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Info about block <b>{{ current_block.height }}</b></h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Block height</th>
+                    <th scope="col">Hash</th>
+                    <th scope="col">Timestamp</th>
+                    <th scope="col">Miner</th>
+                    <th scope="col">Transactions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td>
+                        <a href="">{{ current_block.height }}</a>
+                    </td>
+                    <td class="text-center">{{ current_block.hash }}</td>
+                    <td>{{ current_block.timestamp }}</td>
+                    <td>{{ current_block.miner }}</td>
+                    <td>{{ current_block.transaction_count }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

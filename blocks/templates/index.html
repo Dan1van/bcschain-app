@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Тестовое задание. Стажер - Python Developer{% endblock %}
+
+{% block content %}
+    <div class="container pb-5">
+        {% if page_obj.has_other_pages %}
+            {% include 'pagination.html' with page_obj=page_obj %}
+        {% endif %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Block height</th>
+                    <th scope="col">Hash</th>
+                    <th scope="col">Timestamp</th>
+                    <th scope="col">Miner</th>
+                    <th scope="col">Transactions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for block in page_obj %}
+                    <tr class="text-center">
+                        <td>
+                            <a href="{% url 'block' block.height %}">{{ block.height }}</a>
+                        </td>
+                        <td class="text-center">{{ block.hash }}</td>
+                        <td>{{ block.timestamp }}</td>
+                        <td>{{ block.miner }}</td>
+                        <td>{{ block.transaction_count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if page_obj.has_other_pages %}
+            {% include 'pagination.html' with page_obj=page_obj %}
+        {% endif %}
+    </div>
+{% endblock %}
