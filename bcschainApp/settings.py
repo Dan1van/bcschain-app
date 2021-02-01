@@ -25,7 +25,7 @@ SECRET_KEY = 'wondr5%)ke^tvl1=37@4zkqhciva4$0*c9i2*zyl^^v@#-#dff'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://arcane-earth-19180.herokuapp.com/', '127.0.0.1']
 
 # Application definition
 
