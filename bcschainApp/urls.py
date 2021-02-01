@@ -1,4 +1,4 @@
-"""bcschainAPI URL Configuration
+"""bcschainApp URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -18,10 +18,15 @@ from django.urls import path
 from django.urls import include
 from django.conf.urls.static import settings
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blocks/', include('blocks.urls'))
+]
+
+urlpatterns += [
+    path('', RedirectView.as_view(url='/blocks/', permanent=True)),
 ]
 
 
