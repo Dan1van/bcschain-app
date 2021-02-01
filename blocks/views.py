@@ -8,7 +8,7 @@ from blocks.management.commands.runapscheduler import sync_blocks
 
 def index(request):
     """Displays blocks from blockchain with pagination."""
-    sync_blocks()
+
     blocks = Block.objects.all()
     paginator = Paginator(blocks, 50)
 
