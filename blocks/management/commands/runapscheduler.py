@@ -87,7 +87,7 @@ class Command(BaseCommand):
 
         scheduler.add_job(
             sync_blocks,
-            trigger=CronTrigger(minute="*/5"),
+            trigger=CronTrigger(minute="*/3"),
             id='sync_blocks',
             max_instances=1,
             replace_existing=True,
